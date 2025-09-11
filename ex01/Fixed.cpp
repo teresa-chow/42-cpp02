@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:07 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/11 12:26:35 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/11 12:28:53 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ int		Fixed::toInt( void ) const {
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& src) {
-	os << (src.toFloat());
+	os << src.toFloat();
 	return (os);
 }
