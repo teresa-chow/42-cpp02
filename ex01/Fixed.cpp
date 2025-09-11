@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:07 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/11 12:24:36 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/11 12:26:35 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,6 @@ Fixed &Fixed::operator=(const Fixed& src) {
 	return (*this);
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& src) {
-	os << (src.toFloat());
-	return (os);
-}
-
 Fixed::~Fixed() {
 	std::cout << "Destructor called\n";
 }
@@ -54,4 +49,9 @@ float	Fixed::toFloat( void ) const {
 
 int		Fixed::toInt( void ) const {
 	return (_rawBits >> _fractionalBits);
+}
+
+std::ostream& operator<<(std::ostream& os, const Fixed& src) {
+	os << (src.toFloat());
+	return (os);
 }
