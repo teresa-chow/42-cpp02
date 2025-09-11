@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:07 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/11 12:28:53 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/11 12:53:44 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ Fixed::Fixed(const int integer) {
 Fixed::Fixed(const float floatingPoint) {
 	std::cout << "Float constructor called\n";
 	_rawBits = static_cast<int>(roundf(floatingPoint * (1 << _fractionalBits)));
-	std::cout << "debug: " << _rawBits << std::endl;
 }
 
 Fixed::Fixed(const Fixed& src) {
