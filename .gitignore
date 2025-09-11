@@ -2,3 +2,6 @@ LICENSE
 *.md
 
 */.build/
+
+ex00/ex00
+ex01/ex01
