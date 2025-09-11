@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:07 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/11 12:53:44 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/11 19:09:19 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ Fixed::Fixed(const float floatingPoint) {
 	_rawBits = static_cast<int>(roundf(floatingPoint * (1 << _fractionalBits)));
 }
 
-Fixed::Fixed(const Fixed& src) {
+Fixed::Fixed(const Fixed& other) {
 	std::cout << "Copy constructor called\n";
-	*this = src;
+	*this = other;
 }
 
-Fixed &Fixed::operator=(const Fixed& src) {
+Fixed &Fixed::operator=(const Fixed& other) {
 	std::cout << "Copy assignment operator called\n";
-	if (this != &src)
-		_rawBits = src._rawBits;
+	if (this != &other)
+		_rawBits = other._rawBits;
 	return (*this);
 }
 
@@ -50,7 +50,7 @@ int		Fixed::toInt( void ) const {
 	return (_rawBits >> _fractionalBits);
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& src) {
-	os << src.toFloat();
+std::ostream& operator<<(std::ostream& os, const Fixed& other) {
+	os << other.toFloat();
 	return (os);
 }
