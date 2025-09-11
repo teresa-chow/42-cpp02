@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/10 10:36:12 by tchow-so          #+#    #+#             */
+/*   Updated: 2025/09/11 12:18:48 by tchow-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
+#ifndef FIXED_HPP
+# define FIXED_HPP
+
+# include <iostream>
+# include <cmath>
+
+class Fixed {
+	public:
+		float	toFloat( void ) const;
+		int		toInt( void ) const;
+	
+		Fixed();
+		Fixed(const int integer);
+		Fixed(const float floatingPoint);
+		Fixed(const Fixed& src);
+		Fixed& operator=(const Fixed& src);
+		~Fixed();
+	
+	private:
+		int					_rawBits;
+		static const int	_fractionalBits = 8;
+};
+
+std::ostream& operator<<(std::ostream& os, const Fixed& src);
+
+#endif
