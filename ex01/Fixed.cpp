@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:07 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/11 19:09:19 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/11 19:11:47 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		Fixed::toInt( void ) const {
 	return (_rawBits >> _fractionalBits);
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& other) {
-	os << other.toFloat();
+std::ostream& operator<<(std::ostream& os, const Fixed& src) {
+	os << src.toFloat();
 	return (os);
 }
