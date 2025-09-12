@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:07 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/12 09:08:23 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/12 10:44:59 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,11 +109,18 @@ float Fixed::operator -- (int) {
 /* ***************************** Destructor ***************************** */
 Fixed::~Fixed() {}
 
+/* *************************** Getter & Setter ************************** */
+int		Fixed::getRawBits( void ) const {
+	return (_rawBits);
+}
+void	Fixed::setRawBits(int const raw ) {
+	_rawBits = raw;
+}
+
 /* ************************** Member functions ************************* */
 float	Fixed::toFloat( void ) const {
 	return (static_cast<float>(_rawBits) / (1 << _fractionalBits));
 }
-
 int		Fixed::toInt( void ) const {
 	return (_rawBits >> _fractionalBits);
 }

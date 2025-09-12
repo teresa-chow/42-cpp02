@@ -6,7 +6,7 @@
 /*   By: tchow-so <tchow-so@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 10:36:12 by tchow-so          #+#    #+#             */
-/*   Updated: 2025/09/11 22:34:28 by tchow-so         ###   ########.fr       */
+/*   Updated: 2025/09/12 10:43:14 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 
 class Fixed {
 	public:
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
+	
 		float	toFloat( void ) const;
 		int		toInt( void ) const;
 
