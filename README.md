@@ -3,7 +3,7 @@
 
 _This is the third of ten introductory modules on Object-Oriented Programming (OOP) in C++._
 
-**Core concepts explored in this module are:** _ad-hoc polymorphism, operator overloading
-and the orthodox canonical class form_
-
-Obs.: includes an exercise `ex03` about Binary Space Partioning (BSP).
+**Core concepts explored in this module are:**
+- ad-hoc polymorphism
+- operator overloading
+- the orthodox canonical class form
